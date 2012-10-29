@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68255EF9163F36ED00820083 /* SwipeGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68255EF8163F36ED00820083 /* SwipeGestureRecognizer.m */; };
 		68352F5F163F18C6002373AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68352F5E163F18C6002373AD /* UIKit.framework */; };
 		68352F61163F18C6002373AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68352F60163F18C6002373AD /* Foundation.framework */; };
 		68352F63163F18C6002373AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68352F62163F18C6002373AD /* CoreGraphics.framework */; };
@@ -24,6 +25,7 @@
 		68352F88163F18C7002373AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68352F60163F18C6002373AD /* Foundation.framework */; };
 		68352F90163F18C7002373AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68352F8E163F18C7002373AD /* InfoPlist.strings */; };
 		68352F93163F18C7002373AD /* GestureRecognizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68352F92163F18C7002373AD /* GestureRecognizerTests.m */; };
+		68352FAB163F2D6B002373AD /* GestureMirrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68352FAA163F2D6B002373AD /* GestureMirrorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68255EF7163F36ED00820083 /* SwipeGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeGestureRecognizer.h; sourceTree = "<group>"; };
+		68255EF8163F36ED00820083 /* SwipeGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeGestureRecognizer.m; sourceTree = "<group>"; };
 		68352F5A163F18C6002373AD /* GestureRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68352F5E163F18C6002373AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		68352F60163F18C6002373AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +64,8 @@
 		68352F8F163F18C7002373AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		68352F91163F18C7002373AD /* GestureRecognizerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureRecognizerTests.h; sourceTree = "<group>"; };
 		68352F92163F18C7002373AD /* GestureRecognizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureRecognizerTests.m; sourceTree = "<group>"; };
+		68352FA9163F2D6B002373AD /* GestureMirrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureMirrorView.h; sourceTree = "<group>"; };
+		68352FAA163F2D6B002373AD /* GestureMirrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureMirrorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,10 @@
 				68352F79163F18C6002373AD /* ViewController_iPhone.xib */,
 				68352F7C163F18C6002373AD /* ViewController_iPad.xib */,
 				68352F65163F18C6002373AD /* Supporting Files */,
+				68352FA9163F2D6B002373AD /* GestureMirrorView.h */,
+				68352FAA163F2D6B002373AD /* GestureMirrorView.m */,
+				68255EF7163F36ED00820083 /* SwipeGestureRecognizer.h */,
+				68255EF8163F36ED00820083 /* SwipeGestureRecognizer.m */,
 			);
 			path = GestureRecognizer;
 			sourceTree = "<group>";
@@ -277,6 +287,8 @@
 				68352F6B163F18C6002373AD /* main.m in Sources */,
 				68352F6F163F18C6002373AD /* AppDelegate.m in Sources */,
 				68352F78163F18C6002373AD /* ViewController.m in Sources */,
+				68352FAB163F2D6B002373AD /* GestureMirrorView.m in Sources */,
+				68255EF9163F36ED00820083 /* SwipeGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +473,7 @@
 				68352F98163F18C7002373AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68352F99163F18C7002373AD /* Build configuration list for PBXNativeTarget "GestureRecognizerTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +482,7 @@
 				68352F9B163F18C7002373AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,11 +12,15 @@
 {
 @private
     UIView* MainView;
+    UIView* GestureView;
+@public
+    NSMutableArray* SwipePoints;
 }
 
 @property (nonatomic, retain) UIView* MainView;
+@property (nonatomic, retain) UIView* GestureView;
 
--(void) initWithView : (UIView* ) _MainView;
+-(void) initWithViews : (UIView* ) _MainView GestureView: (UIView*) _GestureView;
 -(void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event;
 -(void) touchesCancelled: (NSSet* ) touches withEvent: (UIEvent *) event;
 - (void) touchesEnded: (NSSet*) touches withEvent: (UIEvent *) event;

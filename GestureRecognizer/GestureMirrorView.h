@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SwipeGestureRecognizer.h"
 
 @interface GestureMirrorView : UIView
+{
+@private
+    SwipeGestureRecognizer* GestureRecognizer;
+    
+}
+
+@property (nonatomic, retain) SwipeGestureRecognizer* GestureRecognizer;
+
+-(void) initWithGestureRecognizer: (SwipeGestureRecognizer*) GestureRecognizer;
 
 @end

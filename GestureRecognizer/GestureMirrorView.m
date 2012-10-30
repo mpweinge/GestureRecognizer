@@ -11,6 +11,8 @@
 
 @implementation GestureMirrorView
 
+@synthesize GestureRecognizer;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -20,21 +22,36 @@
     return self;
 }
 
+- (void) initWithGestureRecognizer:(SwipeGestureRecognizer *)_GestureRecognizer
+{
+    GestureRecognizer = _GestureRecognizer;
+}
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+    if (GestureRecognizer == nil)
+        return;
+    
     // Drawing code
     CGContextRef myContext = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(myContext, 4.0);
     
-    CGContextMoveToPoint(myContext, 0, 0);
+    NSMutableArray* GesturePoints = GestureRecognizer->SwipePoints;
     
     CGContextSetRGBStrokeColor(myContext, 0, 1.0, 1.0, 1.0);
     
-    CGContextAddLineToPoint(myContext, 50, 50);
-    CGContextStrokePath(myContext);
+    float arrayCount = [GesturePoints count];
     
-    NSLog(@"Draw rect called");
+    for (int i = 1; i < arrayCount; i++)
+    {
+        CGPoint FirstPoint = [[GesturePoints objectAtIndex:i-1] CGPointValue];
+        CGPoint SecondPoint = [[GesturePoints objectAtIndex:i] CGPointValue];
+        
+        CGContextMoveToPoint(myContext, FirstPoint.x, FirstPoint.y);
+        CGContextAddLineToPoint(myContext, SecondPoint.x, SecondPoint.y);
+        CGContextStrokePath(myContext);
+    }
 }
 @end

@@ -10,16 +10,22 @@
 
 @implementation SwipeGestureRecognizer
 
-@synthesize MainView;
+@synthesize MainView, GestureView;
 
--(void) initWithView : (UIView* ) _MainView
+-(void) initWithViews : (UIView* ) _MainView GestureView:(UIView*)_GestureView
 {
     MainView = _MainView;
+    GestureView = _GestureView;
+    SwipePoints = [[NSMutableArray alloc]init];
 }
 
 -(void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event
 {
-    NSLog(@"Touches began");
+    [SwipePoints removeAllObjects];
+    UITouch* CurrTouch = [[touches allObjects] objectAtIndex:0];
+    CGPoint newPoint;
+    newPoint = [CurrTouch locationInView:MainView];
+    [SwipePoints addObject:[NSValue valueWithCGPoint:newPoint]];
 }
 
 -(void) touchesCancelled: (NSSet* ) touches withEvent: (UIEvent *) event
@@ -29,12 +35,20 @@
 
 - (void) touchesEnded: (NSSet*) touches withEvent: (UIEvent *) event
 {
-    NSLog(@"Touches ended");
+    UITouch* CurrTouch = [[touches allObjects] objectAtIndex:0];
+    CGPoint newPoint;
+    newPoint = [CurrTouch locationInView:MainView];
+    [SwipePoints addObject:[NSValue valueWithCGPoint:newPoint]];
+    [GestureView setNeedsDisplay];
 }
 
 - (void) touchesMoved: (NSSet*) touches withEvent: (UIEvent*) event
 {
-    NSLog(@"Touches moved");
+    UITouch* CurrTouch = [[touches allObjects] objectAtIndex:0];
+    CGPoint newPoint;
+    newPoint = [CurrTouch locationInView:MainView];
+    [SwipePoints addObject:[NSValue valueWithCGPoint:newPoint]];
+    [GestureView setNeedsDisplay];
 }
 
 @end

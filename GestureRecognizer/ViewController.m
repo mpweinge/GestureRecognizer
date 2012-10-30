@@ -14,12 +14,15 @@
 
 @implementation ViewController
 
+@synthesize MainView, MirrorView, gestureRecognizer;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self->gestureRecognizer = [SwipeGestureRecognizer alloc];
-    [self->gestureRecognizer initWithView:self->MainView];
+    [self->gestureRecognizer initWithViews:self->MainView GestureView:MirrorView];
+    [MirrorView initWithGestureRecognizer:self->gestureRecognizer];
     [self.view addGestureRecognizer:self->gestureRecognizer];
 }
 

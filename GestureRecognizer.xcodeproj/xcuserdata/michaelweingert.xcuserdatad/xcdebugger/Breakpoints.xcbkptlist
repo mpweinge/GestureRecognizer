@@ -8,25 +8,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GestureRecognizer/GestureMirrorView.m"
-         timestampString = "373239959.683974"
+         timestampString = "373248568.669366"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "28"
-         endingLineNumber = "28"
+         startingLineNumber = "38"
+         endingLineNumber = "38"
          landmarkName = "-drawRect:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "GestureRecognizer/SwipeGestureRecognizer.m"
-         timestampString = "373245458.644136"
+         filePath = "GestureRecognizer/GestureMirrorView.m"
+         timestampString = "373248612.383088"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
-         landmarkName = "-touchesMoved:withEvent:"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
+         landmarkName = "-drawRect:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GestureRecognizer/GestureMirrorView.m"
+         timestampString = "373248657.85347"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "39"
+         endingLineNumber = "39"
+         landmarkName = "-drawRect:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

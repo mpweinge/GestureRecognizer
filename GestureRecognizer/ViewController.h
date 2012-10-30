@@ -12,11 +12,11 @@
 #import "SwipeGestureRecognizer.h"
 
 @interface ViewController : UIViewController
-<UIGestureRecognizerDelegate>
 {
 @private
     SwipeGestureRecognizer* gestureRecognizer;
     UIView* MainView;
+    GestureMirrorView* MirrorView;
 }
 
 @property(nonatomic, retain) IBOutlet UIView* MainView;
@@ -24,7 +24,5 @@
 @property (nonatomic, retain) IBOutlet GestureMirrorView* MirrorView;
 
 @property (nonatomic, retain) SwipeGestureRecognizer* gestureRecognizer;
-
-- (IBAction) handleSwipeFrom: (UISwipeGestureRecognizer *) recognizer;
 
 @end

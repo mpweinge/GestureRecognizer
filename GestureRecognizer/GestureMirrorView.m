@@ -53,5 +53,26 @@
         CGContextAddLineToPoint(myContext, SecondPoint.x, SecondPoint.y);
         CGContextStrokePath(myContext);
     }
+    
+    // Draw the current slope
+    CGFloat w, h;
+    w = 20;
+    h = 26;
+    
+    CGContextSelectFont (myContext, // 3
+                         "Courier",
+                         h,
+                         kCGEncodingMacRoman);
+    CGContextSetCharacterSpacing (myContext, 10); // 4
+    CGContextSetTextDrawingMode (myContext, kCGTextFillStroke); // 5
+    
+//    CGAffineTransform myTextTransform =  CGAffineTransformMakeRotation  ( 180 * M_PI / 180); // 8
+//    CGContextSetTextMatrix (myContext, myTextTransform);
+    CGContextScaleCTM(myContext, 1, -1);
+    
+    CGContextSetRGBFillColor (myContext, 0, 1, 0, .5); // 6
+    CGContextSetRGBStrokeColor (myContext, 0, 0, 1, 1); // 7
+    NSString* message = [NSString stringWithFormat:@"Slope: %f", GestureRecognizer->CurrentSlope * 180 / M_PI];
+    CGContextShowTextAtPoint (myContext, 100, -40, [message UTF8String], [message length]);
 }
 @end

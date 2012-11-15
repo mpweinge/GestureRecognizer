@@ -48,6 +48,13 @@
     CGPoint newPoint;
     newPoint = [CurrTouch locationInView:MainView];
     [SwipePoints addObject:[NSValue valueWithCGPoint:newPoint]];
+    
+    //Calculate slope
+    NSUInteger numberPoints = [SwipePoints count];
+    CGPoint lastPoint = [[SwipePoints objectAtIndex:(numberPoints-2)] CGPointValue];
+    double newSlope = atan2((lastPoint.x - newPoint.x), (lastPoint.y - newPoint.y) );
+    CurrentSlope = (self->CurrentSlope * (numberPoints-1) + newSlope) / numberPoints;
+    
     [GestureView setNeedsDisplay];
 }
 

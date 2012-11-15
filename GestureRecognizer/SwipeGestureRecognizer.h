@@ -15,6 +15,7 @@
     UIView* GestureView;
 @public
     NSMutableArray* SwipePoints;
+    double CurrentSlope;
 }
 
 @property (nonatomic, retain) UIView* MainView;
